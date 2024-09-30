@@ -9,6 +9,9 @@ app.use(cors())
 
 app.use('/', userRoutes)
 
-app.listen(3000, () => console.log('SERVIDOR ON'))
+const PORT = process.env.PORT || 3000; // Porta padrão para desenvolvimento
+app.listen(PORT, () => {
+    console.log('SERVIDOR ON');
+});
 
 export default prisma
